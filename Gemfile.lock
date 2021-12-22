@@ -69,6 +69,7 @@ GEM
       irb (>= 1.3.6)
       reline (>= 0.2.7)
     diff-lcs (1.4.4)
+    digest (3.0.0)
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -80,6 +81,7 @@ GEM
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     io-console (0.5.9)
+    io-wait (0.2.1)
     irb (1.3.7)
       reline (>= 0.2.7)
     loofah (2.13.0)
@@ -93,6 +95,13 @@ GEM
     mini_portile2 (2.6.1)
     minitest (5.15.0)
     msgpack (1.4.2)
+    net-protocol (0.1.2)
+      io-wait
+      timeout
+    net-smtp (0.3.1)
+      digest
+      net-protocol
+      timeout
     nio4r (2.5.8)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
@@ -151,6 +160,7 @@ GEM
       rspec-support (~> 3.10)
     rspec-support (3.10.3)
     thor (1.1.0)
+    timeout (0.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     websocket-driver (0.7.5)
@@ -165,6 +175,7 @@ DEPENDENCIES
   bootsnap
   debug
   factory_bot_rails
+  net-smtp
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.0)
