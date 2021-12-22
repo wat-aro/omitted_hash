@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+```shell
+git clone git@github.com:wat-aro/omitted_hash.git
+cd omitted_hash
+docker compose build
+docker compose run --rm app bundle
+docker compose run --rm app bin/rails db:prepare
+```
 
-* Ruby version
+## Test
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```shell
+docker compose run --rm app bundle exec rspec
+```
