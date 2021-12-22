@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe '/articles', type: :request do
   describe 'POST /articles' do
     it '201 を返す' do
